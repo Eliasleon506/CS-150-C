@@ -211,6 +211,7 @@ def median_income_linegraph(data):
     fig.add_trace(go.Scatter(
         x=data["year"],
         y=data["Median_house_income"],
+        yaxis= dict(range =[0,None]),
         mode="lines",
         line=dict(color="blue"),
         name="Median Income"
@@ -225,6 +226,7 @@ def team_expense_linegraph(data, category):
         x=data["year"],
         y=data[category],
         mode="lines",
+        yaxis=dict(range=[0, None]),
         line=dict(color="green"),
         name=category.capitalize()
     ))
@@ -272,7 +274,7 @@ def make_table(family_size, salary, filtered_data, ):
         {"category": "Daily Cost of Lunch", "cost": round(float(lunch_cost), 2)},
         {"category": "Total Cost of Food per Day", "cost": round(float(daily_food_cost), 2)},
         {"category": "Total Cost of Food per Year", "cost": round(float(yearly_food_cost), 2)},
-        {"category": "Percentage of Salary Spent on Food", "cost": f"{round(food_salary_percentage, 2)}%"},
+        {"category": "Percentage of Salary Spent on Food", "cost": f"{round(float(food_salary_percentage), 2)}%"},
         {"category": "Remaining Salary After Food", "cost": round(float(remaining_salary), 2)},
     ]
 
