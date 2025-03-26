@@ -57,3 +57,6 @@ The following strategies from "Storytelling with Data" will be employed in this 
 1. **See the estimations of meal price over time**
 2. **Exploring housing affordability over time**: 
 3. **Estimating food costs for a family**: 
+
+## FeedBack and fix
+  - Was recommended by Nathan Kirk to set my graphs so they always start at 0 (lines 218 and 231 in Vizuals.py)

@@ -211,12 +211,11 @@ def median_income_linegraph(data):
     fig.add_trace(go.Scatter(
         x=data["year"],
         y=data["Median_house_income"],
-        yaxis= dict(range =[0,None]),
         mode="lines",
         line=dict(color="blue"),
         name="Median Income"
     ))
-    fig.update_layout(title="Median Household Income Over Time", xaxis_title="Year", yaxis_title="Income ($)")
+    fig.update_layout(title="Median Household Income Over Time", xaxis_title="Year", yaxis_title="Income ($)",yaxis=dict(range=[0, None]) )
     return fig
 
 
@@ -226,11 +225,10 @@ def team_expense_linegraph(data, category):
         x=data["year"],
         y=data[category],
         mode="lines",
-        yaxis=dict(range=[0, None]),
         line=dict(color="green"),
         name=category.capitalize()
     ))
-    fig.update_layout(title=f"{category.capitalize()} Over Time", xaxis_title="Year", yaxis_title="Cost ($)")
+    fig.update_layout(title=f"{category.capitalize()} Over Time", xaxis_title="Year", yaxis_title="Cost ($)",yaxis=dict(range=[0, None]) )
     return fig
 
 
